@@ -1,11 +1,11 @@
 
 # Coding Challenge for RemWaste
 
+To check the project :
 
 Download the repository
 
-And run 
-
+run 
 
 ```http
  npm run build 
@@ -28,24 +28,21 @@ Bulma
 
 Features :
 
-Light mode :
+Light mode 
 
 ![](public/light.png)
 
-Dark mode :
+Dark mode 
 
 ![](public/dark.png)
 
-Responsive Mid:
+Responsive Mid
 
 ![](public/midpage.png)
 
-Mobile : 
-public/mobile.png
+Mobile 
 
-Mobile :
-
-![](public/midpage.png)
+![](public/mobile.png)
 
 This project was build by me Heisler Stlano
 
