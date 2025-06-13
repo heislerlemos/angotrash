@@ -3,7 +3,7 @@ import "bulma/css/bulma.css";
 import Navbar from "./Navbar";
 import View from "./trash/View";
 import Create from "./trash/Create";
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 
 

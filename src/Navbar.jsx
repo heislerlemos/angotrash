@@ -1,61 +1,59 @@
+import "bulma/css/bulma.css";
+import $ from 'jquery';
+
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+      <nav class="navbar" role="navigation" aria-label="main navigation" id="navMenu">
         <div class="navbar-brand">
-          <a class="navbar-item">AngoTrash</a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+          <a href="/" class="navbar-item">
+            Menu
           </a>
+
+                <a
+        role="button"
+        class="navbar-burger"
+        data-target="navMenu"
+        aria-label="menu"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>  
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        
+      </a>
         </div>
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
-            Create
+            <a href="/create" class="navbar-item">
+              Criar nova Localização{" "}
             </a>
-
-            <a class="navbar-item">View</a>
-
-            <a class="navbar-item">Update</a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">More</a>
-
-              <div class="navbar-dropdown">
-                <a class="navbar-item">About</a>
-                <a class="navbar-item is-selected">Jobs</a>
-                <a class="navbar-item">Contact</a>
-                <hr class="navbar-divider" />
-                <a class="navbar-item">Report an issue</a>
-              </div>
-            </div>
           </div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">Log in</a>
-              </div>
-            </div>
-          </div>
+
         </div>
       </nav>
+      
     </>
+    
   );
+  
 };
+
+$(document).ready(function() {
+
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+  });
+});
+
+
 
 export default Navbar;
