@@ -12,8 +12,8 @@ function App() {
     <>
       <Navbar />
       <br />
-      <div class="title">Localizações</div>
-      <div class="subtitle">
+      <div className="title">Localizações</div>
+      <div className="subtitle">
         Verifique as zonas que possuem mais lixeira no pais em Angola
       </div>
       <br />

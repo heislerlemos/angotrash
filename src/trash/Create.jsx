@@ -1,60 +1,65 @@
+import { FaCheck } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
+
+
 function Create() {
   return (
     <>
-      <div class="title">Crie a localização</div>
+      <div className="title">Crie a localização</div>
       <br />
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-mobile is-half">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Text input" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label">Username</label>
-              <div class="control has-icons-left has-icons-right">
+      <div className="container">
+        <div className="columns is-centered">
+          <div className="column is-mobile is-half">
+            <div className="field">
+              <label className="label">Imagem</label>
+              <div className="control">
                 <input
-                  class="input is-success"
+                  className="input"
                   type="text"
-                  placeholder="Text input"
-                  value="bulma"
+                  placeholder="Insira o link de uma imagem"
                 />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
-                </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-check"></i>
-                </span>
               </div>
-              <p class="help is-success">This username is available</p>
             </div>
 
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control has-icons-left has-icons-right">
+            <div className="field">
+              <label className="label">Zonas</label>
+              <div className="control has-icons-left has-icons-right">
                 <input
-                  class="input is-danger"
+                  className="input"
+                  type="text"
+                  placeholder="Insira nome da localização ex. Cazenga São Paulo"
+                />
+                <span className="icon is-small is-left">
+                  <i><FaUser /></i>
+                </span>
+                <span className="icon is-small is-right">
+                  <i><FaCheck /></i>
+                </span>
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Nivel do lixo</label>
+              <div className="control has-icons-left has-icons-right">
+                <input
+                  className="input is-danger"
                   type="email"
                   placeholder="Email input"
-                  value="hello@"
                 />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
+                <span className="icon is-small is-left">
+                  <i className="fas fa-envelope"></i>
                 </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-exclamation-triangle"></i>
+                <span className="icon is-small is-right">
+                  <i className="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
-              <p class="help is-danger">This email is invalid</p>
+              <p className="help is-danger">This email is invalid</p>
             </div>
 
-            <div class="field">
-              <label class="label">Subject</label>
-              <div class="control">
-                <div class="select">
+            <div className="field">
+              <label className="label">Subject</label>
+              <div className="control">
+                <div className="select">
                   <select>
                     <option>Select dropdown</option>
                     <option>With options</option>
@@ -63,41 +68,44 @@ function Create() {
               </div>
             </div>
 
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+            <div className="field">
+              <label className="label">Message</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Textarea"
+                ></textarea>
               </div>
             </div>
 
-            <div class="field">
-              <div class="control">
-                <label class="checkbox">
+            <div className="field">
+              <div className="control">
+                <label className="checkbox">
                   <input type="checkbox" />I agree to the{" "}
                   <a href="#">terms and conditions</a>
                 </label>
               </div>
             </div>
 
-            <div class="field">
-              <div class="control">
-                <label class="radio">
+            <div className="field">
+              <div className="control">
+                <label className="radio">
                   <input type="radio" name="question" />
                   Yes
                 </label>
-                <label class="radio">
+                <label className="radio">
                   <input type="radio" name="question" />
                   No
                 </label>
               </div>
             </div>
 
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-link">Submit</button>
+            <div className="field is-grouped">
+              <div className="control">
+                <button className="button is-link">Submit</button>
               </div>
-              <div class="control">
-                <button class="button is-link is-light">Cancel</button>
+              <div className="control">
+                <button className="button is-link is-light">Cancel</button>
               </div>
             </div>
           </div>
