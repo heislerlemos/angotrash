@@ -10,7 +10,7 @@ const View = () => {
     <>
       <div class="container">
         <div class="columns is-multiline is-mobile is-centered">
-          <div className="column is-auto">
+          <div className="column is-one-third">
             <div class="card">
               <div class="card-image">
                 <figure class="image is-4by3">
@@ -39,6 +39,7 @@ const View = () => {
             </div>
           </div>
           
+          
         </div>
       </div>
     </>
@@ -48,9 +49,9 @@ const View = () => {
 
 function resize() {
   if ($(window).width() < 700) {
-    $('.column').addClass('is-auto');
+    $('.column').addClass('column is-auto');
   } else {
-    $('.column').removeClass('is-auto');
+    $('.column').removeClass('column is-auto');
   }
 }
 
