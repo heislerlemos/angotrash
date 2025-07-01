@@ -1,11 +1,27 @@
 import "bulma/css/bulma.css";
 import "../assets/css/View.css";
 import $ from "jquery";
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>;
+import React, { useState, useEffect } from "react";
 
 const View = () => {
+
+  
+  const [localizacoes, setLocalizacoes] = useState([]);
+  useEffect(() => {
+  
+    fetch("http://localhost:3000/localizacaos.json")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setPosts(data);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+
   return (
     <>
       <div class="container">
@@ -38,30 +54,26 @@ const View = () => {
               </div>
             </div>
           </div>
-          
-          
         </div>
       </div>
     </>
-    
   );
 };
 
 function resize() {
   if ($(window).width() < 700) {
-    $('.column').addClass('column is-auto');
+    $(".column").addClass("column is-auto");
   } else {
-    $('.column').removeClass('column is-auto');
+    $(".column").removeClass("column is-auto");
   }
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   resize();
 });
 
-$(window).on('resize', function() {
+$(window).on("resize", function () {
   resize();
 });
-
 
 export default View;
