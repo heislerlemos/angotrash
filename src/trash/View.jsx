@@ -19,6 +19,42 @@ const View = () => {
       });
   }, []);
 
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+
+
+function resize() {
+  if ($(window).width() < 700) {
+    $(".column").addClass("column is-auto");
+  } else {
+    $(".column").removeClass("column is-auto");
+  }
+}
+
+$(document).ready(function () {
+  resize();
+});
+
+$(window).on("resize", function () {
+  resize();
+});
+
+
+
   return (
     <>
       {localizacoes.map((localizacao) => {
@@ -56,7 +92,7 @@ const View = () => {
 
                     <div class="content">
                       <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">
+                        <button onClick={myFunction} class="dropbtn">
                           Agentes
                         </button>
                         <div id="myDropdown" class="dropdown-content">
@@ -73,44 +109,10 @@ const View = () => {
           </div>
         );
       })}
-      
     </>
-    
   );
 };
 
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
 
-  window.onclick = function (event) {
-    if (!event.target.matches(".dropbtn")) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show")) {
-          openDropdown.classList.remove("show");
-        }
-      }
-    }
-  };
 
-  function resize() {
-    if ($(window).width() < 700) {
-      $(".column").addClass("column is-auto");
-    } else {
-      $(".column").removeClass("column is-auto");
-    }
-  }
-
-  $(document).ready(function () {
-    resize();
-  });
-
-  $(window).on("resize", function () {
-    resize();
-  });
-
-  
 export default View;
