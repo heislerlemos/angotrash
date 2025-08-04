@@ -1,5 +1,5 @@
 
-# Coding Challenge for RemWaste
+# Coding Challenge 4
 
 To check the project :
 
