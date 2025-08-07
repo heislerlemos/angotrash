@@ -57,11 +57,12 @@ $(window).on("resize", function () {
 
   return (
     <>
+    <div class="container">
+      <div class="columns is-multiline is-centered ">
       {localizacoes.map((localizacao) => {
         return (
-          <div class="container">
-            <div class="columns is-multiline is-mobile is-centered">
-              <div className="column is-one-third">
+              <div className="column">
+                
                 <div class="card">
                   <header class="card-header">
                     <p class="card-header-title">Id : {localizacao.id}</p>
@@ -104,11 +105,13 @@ $(window).on("resize", function () {
                     </div>
                   </div>
                 </div>
+
+
               </div>
-            </div>
-          </div>
-        );
-      })}
+                );
+             })}
+        </div>
+      </div>
     </>
   );
 };

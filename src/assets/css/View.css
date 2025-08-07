@@ -41,3 +41,8 @@
 .dropdown-content a:hover {background-color: #ddd;}
 
 .show {display:block;}
+
+.card {
+  margin: 25px 30px 25px 10px;
+
+}
